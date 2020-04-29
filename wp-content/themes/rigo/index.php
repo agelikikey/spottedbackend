@@ -23,6 +23,7 @@ $args = wpas_get_view_data();
 <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/soaps">/soaps</a></li>
 <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/wipes">/wipes</a></li>
 <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/masks">/masks</a></li>
+<li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/essentials">/essentials</a></li>
 
             <li>You can download the <a href="https://www.getpostman.com/apps">postman client here.</a></li>
         </ul>

@@ -7,6 +7,7 @@ use Rigo\Types\Toiletpaper;
 use Rigo\Types\Soap;
 use Rigo\Types\Wipe;
 use Rigo\Types\Mask;
+use Rigo\Types\Essential;
 use WP_REST_Request;
 
 
@@ -64,6 +65,14 @@ class SampleController{
         }
         return $lst;
     }
+    public function getDraftEssentials(){
+        $query = Essential::all([ 'status' => 'draft' ]);
+        $lst = [];
+        forEach($query->posts as $essential) {
+            $lst[] = Essential::serialize($essential);
+        }
+        return $lst;
+    }
     public function addUser( WP_REST_Request $request ) {
         
         $json = json_decode( $request->get_body() );
@@ -75,6 +84,29 @@ class SampleController{
             'post_status' => 'publish',
         ]);
         update_post_meta( $id, 'firstname', $json->firstname );
+        update_post_meta( $id, 'lastname', $json->lastname );
+        update_post_meta( $id, '', $json->firstname );
+        
+        return 'Post created';
+
+    }
+    public function addEssential( WP_REST_Request $request ) {
+        
+        $json = json_decode( $request->get_body() );
+        
+        $id = wp_insert_post([
+            'post_author' => '1', 
+            'post_type'=>'essential',
+            'post_title' => $json->post_title,
+            'post_status' => 'publish',
+        ]);
+        update_post_meta( $id, 'itemname', $json->itemname );
+        update_post_meta( $id, 'price', $json->price );
+        update_post_meta( $id, 'zip', $json->zip );
+        update_post_meta( $id, 'image', $json->image );
+
+
+
        
         
         return 'Post created';

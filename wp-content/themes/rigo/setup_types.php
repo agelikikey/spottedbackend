@@ -14,3 +14,4 @@ $typeManager->newType(['type' => 'toiletpaper', 'class' => 'Toiletpaper'])->regi
 $typeManager->newType(['type' => 'soap', 'class' => 'Soap'])->register();
 $typeManager->newType(['type' => 'wipe', 'class' => 'Wipe'])->register();
 $typeManager->newType(['type' => 'mask', 'class' => 'Mask'])->register();
+$typeManager->newType(['type' => 'essential', 'class' => 'Essential'])->register();

@@ -19,4 +19,7 @@ $api->get([ 'path' => '/toiletpapers', 'controller' => 'SampleController:getDraf
 $api->get([ 'path' => '/soaps', 'controller' => 'SampleController:getDraftSoaps' ]);
 $api->get([ 'path' => '/wipes', 'controller' => 'SampleController:getDraftWipes' ]);
 $api->get([ 'path' => '/masks', 'controller' => 'SampleController:getDraftMasks' ]);
+$api->get([ 'path' => '/essentials', 'controller' => 'SampleController:getDraftEssentials' ]);
 $api->post([ 'path' => '/createuser', 'controller' => 'SampleController:addUser' ]); 
+$api->post([ 'path' => '/createessential', 'controller' => 'SampleController:addEssential' ]); 
+
