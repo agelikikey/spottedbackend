@@ -16,4 +16,7 @@ $api = new \WPAS\Controller\WPASAPIController([
 $api->get([ 'path' => '/courses', 'controller' => 'SampleController:getDraftCourses' ]); 
 $api->get([ 'path' => '/users', 'controller' => 'SampleController:getDraftUsers' ]); 
 $api->get([ 'path' => '/toiletpapers', 'controller' => 'SampleController:getDraftToiletpapers' ]); 
+$api->get([ 'path' => '/soaps', 'controller' => 'SampleController:getDraftSoaps' ]);
+$api->get([ 'path' => '/wipes', 'controller' => 'SampleController:getDraftWipes' ]);
+$api->get([ 'path' => '/masks', 'controller' => 'SampleController:getDraftMasks' ]);
 $api->post([ 'path' => '/createuser', 'controller' => 'SampleController:addUser' ]); 

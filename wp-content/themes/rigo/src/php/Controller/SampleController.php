@@ -4,6 +4,9 @@ namespace Rigo\Controller;
 use Rigo\Types\Course;
 use Rigo\Types\User;
 use Rigo\Types\Toiletpaper;
+use Rigo\Types\Soap;
+use Rigo\Types\Wipe;
+use Rigo\Types\Mask;
 use WP_REST_Request;
 
 
@@ -34,6 +37,30 @@ class SampleController{
         $lst = [];
         forEach($query->posts as $toiletpaper) {
             $lst[] = Toiletpaper::serialize($toiletpaper);
+        }
+        return $lst;
+    }
+     public function getDraftSoaps(){
+        $query = Soap::all([ 'status' => 'draft' ]);
+        $lst = [];
+        forEach($query->posts as $soap) {
+            $lst[] = Soap::serialize($soap);
+        }
+        return $lst;
+    }
+      public function getDraftWipes(){
+        $query = Wipe::all([ 'status' => 'draft' ]);
+        $lst = [];
+        forEach($query->posts as $wipe) {
+            $lst[] = Wipe::serialize($wipe);
+        }
+        return $lst;
+    }
+      public function getDraftMasks(){
+        $query = Mask::all([ 'status' => 'draft' ]);
+        $lst = [];
+        forEach($query->posts as $mask) {
+            $lst[] = Mask::serialize($mask);
         }
         return $lst;
     }
