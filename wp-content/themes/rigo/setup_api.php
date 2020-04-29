@@ -15,4 +15,5 @@ $api = new \WPAS\Controller\WPASAPIController([
 */
 $api->get([ 'path' => '/courses', 'controller' => 'SampleController:getDraftCourses' ]); 
 $api->get([ 'path' => '/users', 'controller' => 'SampleController:getDraftUsers' ]); 
+$api->get([ 'path' => '/toiletpapers', 'controller' => 'SampleController:getDraftToiletpapers' ]); 
 $api->post([ 'path' => '/createuser', 'controller' => 'SampleController:addUser' ]); 

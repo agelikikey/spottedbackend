@@ -3,7 +3,9 @@ namespace Rigo\Controller;
 
 use Rigo\Types\Course;
 use Rigo\Types\User;
+use Rigo\Types\Toiletpaper;
 use WP_REST_Request;
+
 
 class SampleController{
     
@@ -23,6 +25,15 @@ class SampleController{
         $lst = [];
         forEach($query->posts as $user) {
             $lst[] = User::serialize($user);
+        }
+        return $lst;
+    }
+
+     public function getDraftToiletpapers(){
+        $query = Toiletpaper::all([ 'status' => 'draft' ]);
+        $lst = [];
+        forEach($query->posts as $toiletpaper) {
+            $lst[] = Toiletpaper::serialize($toiletpaper);
         }
         return $lst;
     }
