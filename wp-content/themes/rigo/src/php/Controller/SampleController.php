@@ -103,7 +103,7 @@ class SampleController{
         update_post_meta( $id, 'itemname', $json->itemname );
         update_post_meta( $id, 'price', $json->price );
         update_post_meta( $id, 'zip', $json->zip );
-        update_post_meta( $id, 'image', $json->image );
+
 
 
 
