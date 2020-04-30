@@ -85,7 +85,15 @@ class SampleController{
         ]);
         update_post_meta( $id, 'firstname', $json->firstname );
         update_post_meta( $id, 'lastname', $json->lastname );
-        update_post_meta( $id, '', $json->firstname );
+        update_post_meta( $id, 'phonenumber', $json->phonenumber );
+        update_post_meta( $id, 'password', $json->password );
+        update_post_meta( $id, 'city', $json->city );
+        update_post_meta( $id, 'state', $json->state );
+        update_post_meta( $id, 'zip', $json->zip );
+
+
+
+
         
         return 'Post created';
 
