@@ -19,6 +19,7 @@ $args = wpas_get_view_data();
             <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/courses">/courses</a></li>
 
 <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/users">/users</a></li>
+<li>This is a endpoint: POST: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/createuser">/createuser</a></li>
 <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/toiletpapers">/toiletpapers</a></li>
 <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/soaps">/soaps</a></li>
 <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/wipes">/wipes</a></li>
