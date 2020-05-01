@@ -10,6 +10,7 @@ class Essential extends BasePostType{
         $arrayObject['itemname'] = get_field( 'itemname', $object->ID );
         $arrayObject['price'] = get_field( 'price', $object->ID );
         $arrayObject['zip'] = get_field( 'zip', $object->ID );
+        $arrayObject['img'] = get_field( 'img', $object->ID );
         return $arrayObject;
         
     }

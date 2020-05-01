@@ -11,6 +11,7 @@ class Soap extends BasePostType{
         $arrayObject['price'] = get_field( 'price', $object->ID );
         $arrayObject['location'] = get_field( 'location', $object->ID );
         $arrayObject['date'] = get_field( 'date', $object->ID );
+        $arrayObject['img'] = get_field( 'img', $object->ID );
         return $arrayObject;
         
     }
